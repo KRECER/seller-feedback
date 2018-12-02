@@ -9,7 +9,6 @@ $(function() {
 		if(!ifClick) {
 			$(this).removeClass('feedback__rate--active').prevAll().removeClass('feedback__rate--active');
 		}
-
 	});
 
 	$('.feedback__rate').click(function () {
@@ -18,5 +17,9 @@ $(function() {
 		if ( $(this).next() ) {
 			$(this).nextAll().removeClass('feedback__rate--active');
 		}
+	});
+
+	$('.feedbacks__reply').click(function() {
+		$('.feedbacks__reply-content').toggle('feedbacks__reply-content--show');
 	});
 });
