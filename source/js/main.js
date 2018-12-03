@@ -58,14 +58,18 @@ $(function() {
 
 	$('.feedbacks__replies').mouseover(function() {
 		if ( !$(this).hasClass('feedbacks__replies--full') ) {
-			$(this).addClass('feedbacks__replies--hover');
+			$(this).addClass('feedbacks__wrapper--hover');
 		}
 		
 	});
 
 	$('.feedbacks__replies').mouseout(function() {
 		if ( !$(this).hasClass('feedbacks__replies--full') ) {
-			$(this).removeClass('feedbacks__replies--hover');
+			$(this).removeClass('feedbacks__wrapper--hover');
 		}
+	});
+
+	$('.feedbacks__replies').click(function() {
+			$(this).addClass('feedbacks__replies--full');
 	});
 });
