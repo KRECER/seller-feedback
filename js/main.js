@@ -20,6 +20,7 @@ $(function() {
 	});
 
 	$('.feedbacks__reply').click(function(target) {
+		$('.feedbacks__reply-content').not( $('.feedbacks__reply-content', target.currentTarget.offsetParent) ).css('display', 'none');
 		$('.feedbacks__reply-content', target.currentTarget.offsetParent).toggle('.feedbacks__reply-content--show');
 		$('html, body').animate({ scrollTop: $('.feedbacks__reply-content', target.currentTarget.offsetParent).offset().top }, 500);
 	});
