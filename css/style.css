@@ -529,33 +529,40 @@ img {
           transform: translateY(-50%);
   fill: #ffffff; }
 
-.feedbacks__replies {
+.feedbacks__reply-comments {
+  margin: 0;
+  padding: 0;
+  margin-left: 34px;
+  list-style: none; }
+
+.feedbacks__wrapper {
   position: relative;
   display: flex;
   align-items: center;
   margin-top: 22px;
+  margin-bottom: 24px;
   padding-left: 45px;
   cursor: pointer; }
-  .feedbacks__replies--hide {
+  .feedbacks__wrapper--hide {
     display: none; }
-  .feedbacks__replies--hover {
+  .feedbacks__wrapper--hover {
     background-color: #000000;
     padding-right: 26px; }
 
-.feedbacks__replies .feedbacks__icon-arrow {
+.feedbacks__wrapper .feedbacks__icon-arrow {
   left: 10px; }
 
-.feedbacks__replies .feedback__avatar {
+.feedbacks__wrapper .feedback__avatar {
   position: relative;
   width: 40px;
   height: 40px;
   margin-right: 7px; }
-  .feedbacks__replies .feedback__avatar::after {
+  .feedbacks__wrapper .feedback__avatar::after {
     width: 8px;
     height: 8px;
     border-width: 3px; }
 
-.feedbacks__replies .feedback__picture {
+.feedbacks__wrapper .feedback__picture {
   width: 40px;
   height: 40px; }
 
@@ -573,9 +580,18 @@ img {
     font-size: 30px; }
 
 .feedbacks__counter {
+  flex-shrink: 0;
   margin-right: 16px;
   letter-spacing: 0.0571991px;
   color: #7ED321; }
+
+.feedbacks__line {
+  display: none;
+  width: 100%;
+  border-color: #979797; }
+
+.feedbacks__replies--full .feedbacks__line {
+  display: block; }
 
 .feedbacks__view-thread {
   display: none; }
@@ -601,6 +617,20 @@ img {
   fill: #ffffff; }
 
 .feedbacks__replies--hover .feedbacks__icon-arrow-right {
+  display: block; }
+
+.feedbacks__replies--full {
+  background-color: transparent;
+  cursor: auto; }
+
+.feedbacks__replies--full .feedback__avatar,
+.feedbacks__replies--full .feedbacks__add-reply,
+.feedbacks__replies--full .feedbacks__view-thread,
+.feedbacks__replies--full .feedbacks__last-reply,
+.feedbacks__replies--full .feedbacks__icon-arrow-right {
+  display: none; }
+
+.feedbacks__reply-comments .feedback__avatar {
   display: block; }
 
 .feedbacks__like,
