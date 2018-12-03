@@ -22,4 +22,12 @@ $(function() {
 	$('.feedbacks__reply').click(function() {
 		$(this).next().next().toggle('.feedbacks__reply-content--show');
 	});
+
+	$('.feedbacks__replies').mouseover(function() {
+		$(this).addClass('feedbacks__replies--hover');
+	});
+
+	$('.feedbacks__replies').mouseout(function() {
+		$(this).removeClass('feedbacks__replies--hover');
+	});
 });
