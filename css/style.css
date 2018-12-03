@@ -533,7 +533,11 @@ img {
   margin: 0;
   padding: 0;
   margin-left: 34px;
+  display: none;
   list-style: none; }
+
+.feedbacks__replies--full .feedbacks__reply-comments {
+  display: block; }
 
 .feedbacks__wrapper {
   position: relative;
@@ -596,10 +600,10 @@ img {
 .feedbacks__view-thread {
   display: none; }
 
-.feedbacks__replies--hover .feedbacks__view-thread {
+.feedbacks__wrapper--hover .feedbacks__view-thread {
   display: block; }
 
-.feedbacks__replies--hover .feedbacks__last-reply {
+.feedbacks__wrapper--hover .feedbacks__last-reply {
   display: none; }
 
 .feedbacks__view-thread,
@@ -616,7 +620,7 @@ img {
   display: none;
   fill: #ffffff; }
 
-.feedbacks__replies--hover .feedbacks__icon-arrow-right {
+.feedbacks__wrapper--hover .feedbacks__icon-arrow-right {
   display: block; }
 
 .feedbacks__replies--full {
