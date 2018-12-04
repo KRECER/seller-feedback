@@ -29,7 +29,6 @@ $(function() {
 		if ( !$(this).hasClass('feedbacks__replies--full') ) {
 			$(this).addClass('feedbacks__wrapper--hover');
 		}
-		
 	});
 
 	$('.feedbacks__replies').mouseout(function() {
@@ -39,6 +38,11 @@ $(function() {
 	});
 
 	$('.feedbacks__replies').click(function() {
+		$(this).removeClass('feedbacks__wrapper--hover');
+		if (! $(this).hasClass('feedbacks__replies--full') ) {
 			$(this).addClass('feedbacks__replies--full');
+		} else {
+			$(this).removeClass('feedbacks__replies--full');
+		}
 	});
 });
