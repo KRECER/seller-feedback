@@ -40,5 +40,6 @@ $(function() {
 
 	$('.feedbacks__replies').click(function() {
 			$(this).addClass('feedbacks__replies--full');
+			$(this).addClass('feedbacks__replies--full');
 	});
 });
